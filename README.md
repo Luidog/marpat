@@ -247,7 +247,7 @@ Once a document is saved, it will automatically be assigned a unique identifier 
 
 If you specified a default value (or function) for a schema variable, that value will be assigned on creation of the object.
 
-An alternative to `.save()` is `.findOneAndUpdate(query, update, options)`. This static method will find and update (or insert) a document in one atomic operation (atomicity is guaranteed in MongoDB only). Using the `{upsert: true}` option will return a new document if one is not found with the given query.
+An alternative to `.save()` is `.findOneAndUpdate(query, update, options)`. This static method will find and update (or insert) a document in one atomic operation (atomicity is guaranteed in MongoDB only). Using the `{upsert: true}` option will return a new document if one is not found with the given query. For NeDB, you can use the option `{manual: true}` to specify field modifiers manually (see NeDB [docs](https://github.com/seald/nedb#updating-documents) for a complete list).
 
 ### Loading
 
